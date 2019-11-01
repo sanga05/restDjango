@@ -25,7 +25,7 @@ SECRET_KEY = 'rzm9m6(h_r9l(4z9^-e22^8yb$!_s8=lnq5#0yl@_g=5@+nz^p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','localhost']
 
 
 # Application definition
@@ -75,9 +75,12 @@ WSGI_APPLICATION = 'dRestService.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'users',
+        'HOST': 'mongodb+srv://admin:tadmin@cluster0-svh55.mongodb.net/users?retryWrites=true&w=majority',
+        'USER': 'admin',
+        'PASSWORD': 'tadmin',
     }
 }
 

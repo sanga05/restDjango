@@ -6,4 +6,5 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 @api_view(['GET', 'POST', ])
 def getUser(request):
+
          return Response("everthyng ok", status=status.HTTP_200_OK,template_name='articles.html')
